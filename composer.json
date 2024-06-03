@@ -1,39 +1,42 @@
 {
     "name": "statink/yii2-jdenticon",
-    "type": "yii2-extension",
-    "license": "MIT",
     "description": "Jdenticon asset bundle for stat.ink",
-    "minimum-stability": "stable",
-    "require": {
-        "php": ">= 7.1.0",
-        "yiisoft/yii2": "~2.0.15",
-        "npm-asset/jdenticon": "^2.1.0"
-    },
-    "config": {
-        "process-timeout": 1800,
-        "fxp-asset": {
-            "enabled": false
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "statink\\yii2\\jdenticon\\": "src"
-        }
-    },
+    "license": "MIT",
+    "type": "yii2-extension",
     "authors": [
         {
             "name": "AIZAWA Hina",
             "email": "hina@bouhime.com"
         }
     ],
+    "require": {
+        "php": ">= 8.2.0",
+        "npm-asset/jdenticon": "^2.1.0",
+        "yiisoft/yii2": "^2.0.15"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.42"
+    },
     "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packagist.jp"
-        },
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
         }
-    ]
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "statink\\yii2\\jdenticon\\": "src"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "yiisoft/yii2-composer": true
+        },
+        "fxp-asset": {
+            "enabled": false
+        },
+        "process-timeout": 1800
+    }
 }
